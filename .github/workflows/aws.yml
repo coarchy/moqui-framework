@@ -83,7 +83,7 @@ jobs:
           cd docker/simple
           ./docker-build.sh ../.. $ECR_REGISTRY/$ECR_REPOSITORY:latest
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
-          echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:latest"
+          echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY"
 
       - name: Get Task Definition
         id: get-task-def
