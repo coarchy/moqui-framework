@@ -91,6 +91,7 @@ jobs:
           aws ecs describe-task-definition --task-definition ${{ env.ECS_TASK_DEFINITION_NAME }} --output json > ${{ env.ECS_TASK_DEFINITION }}
           sed '2d;$d' ${{ env.ECS_TASK_DEFINITION }} | sed '$d' | sed '$d' > ${{ env.ECS_TASK_DEFINITION }}.tmp && echo "}" >> ${{ env.ECS_TASK_DEFINITION }}.tmp && mv ${{ env.ECS_TASK_DEFINITION }}.tmp ${{ env.ECS_TASK_DEFINITION }}
 
+# This should stay commented.
 #      - name: Fill in the new image ID in the Amazon ECS task definition
 #        id: task-def
 #        uses: aws-actions/amazon-ecs-render-task-definition@v1
@@ -102,7 +103,7 @@ jobs:
       - name: Deploy Amazon ECS task definition
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
-          task-definition: ${{ steps.task-def.outputs.task-definition }}
+          task-definition: ${{ env.ECS_TASK_DEFINITION }}
           service: ${{ env.ECS_SERVICE }}
           cluster: ${{ env.ECS_CLUSTER }}
           wait-for-service-stability: true # setting this to true uses a lot of resources
