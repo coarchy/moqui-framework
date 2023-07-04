@@ -88,8 +88,9 @@ jobs:
       - name: Get Task Definition
         id: get-task-def
         run: |
-          aws ecs describe-task-definition --task-definition ${{ env.ECS_TASK_DEFINITION_NAME }} --output json > coarchy-task
-          sed '2d;$d' coarchy-task | sed '$d' | sed '$d' > coarchy-task.tmp && echo "}" >> coarchy-task.tmp && mv coarchy-task.tmp coarchy-task
+          aws ecs describe-task-definition --task-definition ${{ env.ECS_TASK_DEFINITION_NAME }} --output json > ${{ env.ECS_TASK_DEFINITION_NAME }}
+          sed -i 's/::/:/g' ${{ env.ECS_TASK_DEFINITION_NAME }}
+          sed '2d;$d' ${{ env.ECS_TASK_DEFINITION_NAME }} | sed '$d' | sed '$d' > ${{ env.ECS_TASK_DEFINITION_NAME }}.tmp && echo "}" >> ${{ env.ECS_TASK_DEFINITION_NAME }}.tmp && mv ${{ env.ECS_TASK_DEFINITION_NAME }}.tmp ${{ env.ECS_TASK_DEFINITION_NAME }}
 
       - name: Fill in the new image ID in the Amazon ECS task definition
         id: task-def
