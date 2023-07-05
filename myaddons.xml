@@ -1,11 +1,10 @@
 <addons default-repository="github-ssh">
     <!-- coarchy Client Components -->
-    <component name="coarchy-com" group="coarchy" version="" branch="master"/>
+    <component name="coarchy-com" group="coarchy" version="" branch="coarchy"/>
     <runtime name="moqui-runtime" group="coarchy" version="3.0.0" branch="coarchy"/>
 
     <!-- Component Sets -->
-<!--    <component-set name="coarchy" components="PopCommerce,HiveMind,MarbleERP,coarchy-com"/> -->
-    <component-set name="coarchy" components=""/>
+    <component-set name="coarchy" components="PopCommerce,HiveMind,MarbleERP,coarchy-com"/>
 
     <!-- Release builds:
         gradle getComponentSet -PcomponentSet=custom -PlocationType=release
