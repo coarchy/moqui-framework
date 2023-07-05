@@ -3,7 +3,8 @@
     <component name="coarchy-com" group="coarchy" version="" branch="master"/>
 
     <!-- Component Sets -->
-    <component-set name="coarchy" components="PopCommerce,HiveMind,MarbleERP,coarchy-com"/>
+<!--    <component-set name="coarchy" components="PopCommerce,HiveMind,MarbleERP,coarchy-com"/> -->
+    <component-set name="coarchy" components=""/>
 
     <!-- Release builds:
         gradle getComponentSet -PcomponentSet=custom -PlocationType=release
