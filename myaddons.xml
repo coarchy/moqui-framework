@@ -2,7 +2,7 @@
 
     <!-- coarchy Client Components -->
     <component name="coarchy-com" group="coarchy" version="" branch="coarchy"/>
-    <component name="coarchy" group="coarchy" version="" branch="seperate-apps"/>
+    <component name="coarchy" group="coarchy" version="" branch="coarchy"/>
     <runtime name="moqui-runtime" group="coarchy" version="" branch="coarchy"/>
 
     <!-- Moqui Componenets -->
