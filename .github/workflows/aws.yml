@@ -82,7 +82,10 @@ jobs:
           ./gradlew addRuntime
           cd docker/simple
           ./docker-build.sh ../.. $ECR_REGISTRY/$ECR_REPOSITORY:latest
+          EPOCH_TIME=$(date +%s)
+          docker tag $ECR_REGISTRY/$ECR_REPOSITORY:latest $ECR_REGISTRY/$ECR_REPOSITORY:$EPOCH_TIME
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$EPOCH_TIME
           echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:latest"
 
       - name: Get Task Definition
