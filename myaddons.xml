@@ -10,7 +10,7 @@
     <component name="MarbleERP" group="moqui" version="1.0.0" branch="master"/>
 
     <!-- Component Sets -->
-    <component-set name="coarchy" components="MarbleERP,coarchy"/>
+    <component-set name="coarchy" components="MarbleERP,coarchy,WorkManagement"/>
 
     <!-- Release builds:
         gradle getComponentSet -PcomponentSet=custom -PlocationType=release
