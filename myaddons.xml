@@ -7,6 +7,7 @@
     <runtime name="mantle-usl" group="moqui" version="" branch="decimalDigits"/>
 
     <!-- Moqui Componenets -->
+    <component name="stripe" group="coarchy" version="" branch="master"/>
     <component name="MarbleERP" group="moqui" version="1.0.0" branch="master"/>
 
     <!-- Component Sets -->
