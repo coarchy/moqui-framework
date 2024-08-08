@@ -10,8 +10,11 @@
     <component name="stripe" group="coarchy" version="" branch="master"/>
     <component name="MarbleERP" group="moqui" version="1.0.0" branch="master"/>
 
+    <!-- acetousk Components -->
+    <component group="acetousk" name="sentry" branch="master"/>
+
     <!-- Component Sets -->
-    <component-set name="coarchy" components="MarbleERP,coarchy,WorkManagement"/>
+    <component-set name="coarchy" components="MarbleERP,coarchy,WorkManagement,sentry"/>
 
     <!-- Release builds:
         gradle getComponentSet -PcomponentSet=custom -PlocationType=release
